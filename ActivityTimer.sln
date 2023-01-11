@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActivityTimer", "ActivityTimer\ActivityTimer.csproj", "{AB02FD51-7368-46FD-AF7A-BA8869DBA6E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ActivityTimer", "ActivityTimer\ActivityTimer.csproj", "{AB02FD51-7368-46FD-AF7A-BA8869DBA6E6}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{EFB74A0B-C2DA-4C51-8A14-15DC229650A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,8 @@ Global
 		{AB02FD51-7368-46FD-AF7A-BA8869DBA6E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB02FD51-7368-46FD-AF7A-BA8869DBA6E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB02FD51-7368-46FD-AF7A-BA8869DBA6E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFB74A0B-C2DA-4C51-8A14-15DC229650A7}.Debug|Any CPU.ActiveCfg = Debug
+		{EFB74A0B-C2DA-4C51-8A14-15DC229650A7}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

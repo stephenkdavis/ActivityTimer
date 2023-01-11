@@ -8,19 +8,19 @@ namespace ActivityTimer
 
         static void Main(string[] args)
         {
-            int counter = 0;
             PromptTimeLength();
-            while (counter < 30)
+            while (true)
             {
                 Count();
                 DisplayMessage();
-                counter++;
             }
         }
 
         static void PromptTimeLength()
         {
-            string input = Interaction.InputBox("Enter a time length between prompts in minutes.\nNo value or invalid values will select the default of 30 minutes.", "Time Length");
+            string line1 = "Enter a time length between prompts in minutes.";
+            string line2 = "No value or invalid values will select the default of 30 minutes.";
+            string input = Interaction.InputBox(String.Format("{0}\n{1}", line1, line2), "Time Length");
             bool success = int.TryParse(input, out int value);
             Minutes = success ? value : 30;
         }
@@ -34,8 +34,12 @@ namespace ActivityTimer
         static void DisplayMessage()
         {
             string title = "Activity Timer";
-            string message = String.Format("{0} minutes have passed.\nGet up and move around!", Minutes);
-            MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            string line1 = "minutes have passed.";
+            string line2 = "Would you like to continue this timer or exit this program?";
+            string message = String.Format("{0} {1}\n{2}", Minutes, line1, line2);
+            DialogResult result = MessageBox.Show(message, title, MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
+            if (result == DialogResult.No)
+                Environment.Exit(0);
         }
     }
 }
